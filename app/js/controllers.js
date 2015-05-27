@@ -2,9 +2,9 @@
 
 /* Controllers */
 
-var dotaControllers = angular.module('dotaControllers', []);
+var dotaControllers = angular.module('dotaControllers', ['dotaServices']);
 
-dotaControllers.controller('dotaMatchesListCtrl', ['$scope', 'twitter',
+dotaControllers.controller('dotaMatchesListCtrl', ['$scope', 'latestMatches',
     function($scope, twitter){
 
 
