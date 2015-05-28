@@ -10,10 +10,11 @@ dotaControllers.controller('dotaMatchesListCtrl', ['$scope', 'Match', 'Hero',
 
         var heroes = Hero.query();
 
+
         $scope.getName = function(id){
             //Je¿eli zostali wczytani herosi, to zwróæ imiê danego herosa
             if(heroes.length > 0){
-                return heroes[id].name;
+                return heroes[id-1].name;
             }
         }
     }]);
