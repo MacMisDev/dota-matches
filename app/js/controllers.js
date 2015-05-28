@@ -17,7 +17,7 @@ dotaControllers.controller('dotaMatchesListCtrl', ['$scope', 'Data',
             if(heroes.length > 0){
                 return heroes[id-1].name;
             }
-        }
+        };
 
         $scope.orderProp = 'duration';
 
@@ -30,5 +30,13 @@ dotaControllers.controller('dotaMatchesDetailCtrl', ['$scope', '$routeParams', '
         $scope.match = Data.matches.get({
             matchId: $routeParams.matchId
         });
+
+        var heroes = Data.heroes.query();
+        $scope.getName = function(id){
+            //Je¿eli zostali wczytani herosi, to zwróæ imiê danego herosa
+            if(heroes.length > 0){
+                return heroes[id-1].name;
+            }
+        };
 
     }]);

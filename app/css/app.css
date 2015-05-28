@@ -17,3 +17,24 @@ body {
 .dire{
     color: darkred;
 }
+
+.row1{
+    margin: 10px 10px 10px 10px;
+    width: 80%;
+}
+
+.table td, th {
+    text-align: center;
+}
+
+.winner{
+    text-align: center;
+    font-weight: bold;
+    font-size: 30px;
+}
+
+.center{
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+}

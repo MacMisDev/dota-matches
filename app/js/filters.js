@@ -6,7 +6,7 @@ var dotaFilters = angular.module('dotaFilters', []);
 
 dotaFilters.filter('checkWhoWin', function() {
     return function(input) {
-        return input ? 'Radiant win' : 'Dire win';
+        return input ? 'Radiant victory' : 'Dire victory';
     };
 });
 
