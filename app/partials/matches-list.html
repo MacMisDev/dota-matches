@@ -6,13 +6,28 @@
         </div>
         <div class="col-md-10">
 
-            <ul class="matches">
-                <li ng-repeat="match in matches" class="matchesList">
-                    <a href="#/matches/{{match.match_id}}" class="matchLink" >{{match.match_id}}</a>
-                    <p data-ng-repeat="player in match.players" class="heroesList"><img ng-src="img/heroes/{{getName(player.hero_id)}}_full.png" class="portrait"></p>
-
-                </li>
-            </ul>
+             <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>Match ID</th>
+                        <th>Game Mode</th>
+                        <th>Result</th>
+                        <th>Duration</th>
+                        <th>Radiant</th>
+                        <th>Dire</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="match in matches">
+                        <td><a href="#/matches/{{match.match_id}}">{{match.match_id}}</a></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td><span data-ng-repeat="player in match.players"><img ng-src="img/heroes/{{getName(player.hero_id)}}_full.png" ng-show="$index % 2 == 0" class="portrait"></span></td>
+                        <td><span data-ng-repeat="player in match.players"><img ng-src="img/heroes/{{getName(player.hero_id)}}_full.png" ng-show="$index % 2 == 1" class="portrait"></span></td>
+                    </tr>
+                </tbody>
+            </table>
         </div>
     </div>
 </div>
