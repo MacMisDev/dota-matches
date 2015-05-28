@@ -18,11 +18,6 @@ body {
     color: darkred;
 }
 
-.row1{
-    margin: 10px 10px 10px 10px;
-    width: 80%;
-}
-
 .table td, th {
     text-align: center;
 }
