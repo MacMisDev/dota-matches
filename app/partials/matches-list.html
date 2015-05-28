@@ -3,7 +3,12 @@
         <div class="col-md-2">
             <!--Sidebar content-->
 
-            tutaj klik
+            Sort by:
+            <select ng-model="orderProp">
+                <option value="game_mode">Game mode</option>
+                <option value="duration">Duration</option>
+                <option value="radiant_win">Result</option>
+            </select>
         </div>
         <div class="col-md-10">
 
@@ -19,7 +24,7 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr ng-repeat="match in matches">
+                    <tr ng-repeat="match in matches | orderBy:orderProp">
                         <td><a href="#/matches/{{match.match_id}}">{{match.match_id}}</a></td>
                         <td>{{ match.game_mode | checkGameMode }}</td>
                         <td>{{ match.radiant_win | checkWhoWin }}</td>

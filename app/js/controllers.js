@@ -19,6 +19,7 @@ dotaControllers.controller('dotaMatchesListCtrl', ['$scope', 'Data',
             }
         }
 
+        $scope.orderProp = 'duration';
 
     }]);
 
