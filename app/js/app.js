@@ -6,7 +6,8 @@ var dota = angular.module('dota', [
     'ngRoute',
     'ngResource',
     'dotaControllers',
-    'dotaServices'
+    'dotaServices',
+    'dotaFilters'
 ]);
 
 dota.config(['$routeProvider',

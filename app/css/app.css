@@ -9,3 +9,11 @@ body {
     width: 50px;
     border: 1px solid black;
 }
+
+.radiant{
+    color: forestgreen;
+}
+
+.dire{
+    color: darkred;
+}

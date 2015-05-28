@@ -4,11 +4,12 @@
 
 var dotaControllers = angular.module('dotaControllers', ['dotaServices']);
 
-dotaControllers.controller('dotaMatchesListCtrl', ['$scope', 'Match', 'Hero',
-    function($scope, Match, Hero){
-        $scope.matches = Match.query();
+dotaControllers.controller('dotaMatchesListCtrl', ['$scope', 'Data',
+    function($scope, Data){
 
-        var heroes = Hero.query();
+        $scope.matches = Data.matches.query();
+
+        var heroes = Data.heroes.query();
 
 
         $scope.getName = function(id){
@@ -17,13 +18,15 @@ dotaControllers.controller('dotaMatchesListCtrl', ['$scope', 'Match', 'Hero',
                 return heroes[id-1].name;
             }
         }
+
+
     }]);
 
 
 
-dotaControllers.controller('dotaMatchesDetailCtrl', ['$scope', '$routeParams', 'Match',
-    function($scope, $routeParams, Match){
-        $scope.match = Match.get({
+dotaControllers.controller('dotaMatchesDetailCtrl', ['$scope', '$routeParams', 'Data',
+    function($scope, $routeParams, Data){
+        $scope.match = Data.matches.get({
             matchId: $routeParams.matchId
         });
 

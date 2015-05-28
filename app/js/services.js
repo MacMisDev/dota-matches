@@ -4,18 +4,19 @@
 
 var dotaServices = angular.module('dotaServices', ['ngResource']);
 
-dotaServices.factory('Match', ['$resource',
+dotaServices.factory('Data', ['$resource',
     function($resource){
 
-        return $resource('matches/:matchId.json', {}, {
-            query: {method:'GET', params:{matchId:'matches'}, isArray:true}
-        });
-    }]);
-
-dotaServices.factory('Hero', ['$resource',
-    function($resource){
         var heroes = $resource('matches/heroes.json', {}, {
             query: {method:'GET', isArray:true}
         });
-        return heroes;
+
+        var matches = $resource('matches/:matchId.json', {}, {
+            query: {method:'GET', params:{matchId:'matches'}, isArray:true}
+        });
+
+        return {
+            heroes: heroes,
+            matches: matches
+        };
     }]);

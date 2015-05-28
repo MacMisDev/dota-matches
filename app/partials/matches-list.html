@@ -2,6 +2,7 @@
     <div class="row">
         <div class="col-md-2">
             <!--Sidebar content-->
+
             tutaj klik
         </div>
         <div class="col-md-10">
@@ -13,18 +14,18 @@
                         <th>Game Mode</th>
                         <th>Result</th>
                         <th>Duration</th>
-                        <th>Radiant</th>
-                        <th>Dire</th>
+                        <th class="radiant">Radiant</th>
+                        <th class="dire">Dire</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr ng-repeat="match in matches">
                         <td><a href="#/matches/{{match.match_id}}">{{match.match_id}}</a></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td><span data-ng-repeat="player in match.players"><img ng-src="img/heroes/{{getName(player.hero_id)}}_full.png" ng-show="$index % 2 == 0" class="portrait"></span></td>
-                        <td><span data-ng-repeat="player in match.players"><img ng-src="img/heroes/{{getName(player.hero_id)}}_full.png" ng-show="$index % 2 == 1" class="portrait"></span></td>
+                        <td>{{ match.game_mode | checkGameMode }}</td>
+                        <td>{{ match.radiant_win | checkWhoWin }}</td>
+                        <td>{{ match.duration | convertTime }}</td>
+                        <td><span data-ng-repeat="player in match.players"><img ng-src="img/heroes/{{getName(player.hero_id)}}_full.png" ng-show="$index < 5" class="portrait"></span></td>
+                        <td><span data-ng-repeat="player in match.players"><img ng-src="img/heroes/{{getName(player.hero_id)}}_full.png" ng-show="$index >= 5" class="portrait"></span></td>
                     </tr>
                 </tbody>
             </table>

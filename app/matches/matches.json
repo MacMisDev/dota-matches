@@ -1,6 +1,9 @@
 [
       {
         "match_id": 1264551987,
+        "radiant_win": false,
+        "duration": 1821,
+        "game_mode": 1,
         "match_seq_num": 1133874506,
         "start_time": 1424620201,
         "lobby_type": 0,
@@ -62,6 +65,9 @@
       },
       {
         "match_id": 1264347925,
+        "radiant_win": true,
+        "duration": 3551,
+        "game_mode": 1,
         "match_seq_num": 1133785014,
         "start_time": 1424615839,
         "lobby_type": 0,
@@ -123,6 +129,9 @@
       },
       {
         "match_id": 1263912705,
+        "radiant_win": true,
+        "duration": 2447,
+        "game_mode": 18,
         "match_seq_num": 1133394740,
         "start_time": 1424609231,
         "lobby_type": 0,
@@ -184,6 +193,9 @@
       },
       {
         "match_id": 1214497333,
+        "radiant_win": true,
+        "duration": 3210,
+        "game_mode": 22,
         "match_seq_num": 1088630844,
         "start_time": 1423152423,
         "lobby_type": 7,
@@ -245,6 +257,9 @@
       },
       {
         "match_id": 1212886886,
+        "radiant_win": true,
+        "duration": 2093,
+        "game_mode": 22,
         "match_seq_num": 1087149418,
         "start_time": 1423094700,
         "lobby_type": 7,
@@ -306,6 +321,9 @@
       },
       {
         "match_id": 1212450888,
+        "radiant_win": true,
+        "duration": 2603,
+        "game_mode": 22,
         "match_seq_num": 1086917287,
         "start_time": 1423077127,
         "lobby_type": 7,
@@ -367,6 +385,9 @@
       },
       {
         "match_id": 1212350086,
+        "radiant_win": true,
+        "duration": 2855,
+        "game_mode": 22,
         "match_seq_num": 1086836876,
         "start_time": 1423073664,
         "lobby_type": 7,
@@ -428,6 +449,9 @@
       },
       {
         "match_id": 1212226558,
+        "radiant_win": true,
+        "duration": 3004,
+        "game_mode": 22,
         "match_seq_num": 1086730136,
         "start_time": 1423069818,
         "lobby_type": 7,
@@ -489,6 +513,9 @@
       },
       {
         "match_id": 1210377130,
+        "radiant_win": false,
+        "duration": 3065,
+        "game_mode": 22,
         "match_seq_num": 1085026036,
         "start_time": 1423002984,
         "lobby_type": 7,
@@ -550,6 +577,9 @@
       },
       {
         "match_id": 1210029038,
+        "radiant_win": true,
+        "duration": 2211,
+        "game_mode": 22,
         "match_seq_num": 1084701130,
         "start_time": 1422987647,
         "lobby_type": 7,
