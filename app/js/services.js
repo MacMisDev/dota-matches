@@ -11,3 +11,11 @@ dotaServices.factory('Match', ['$resource',
             query: {method:'GET', params:{matchId:'matches'}, isArray:true}
         });
     }]);
+
+dotaServices.factory('Hero', ['$resource',
+    function($resource){
+        var heroes = $resource('matches/heroes.json', {}, {
+            query: {method:'GET', isArray:true}
+        });
+        return heroes;
+    }]);

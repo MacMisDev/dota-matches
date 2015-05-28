@@ -8,7 +8,9 @@
 
             <ul class="matches">
                 <li ng-repeat="match in matches" class="matchesList">
-                    <a href="#/matches/{{match.match_id}}">{{match.match_id}}</a>
+                    <a href="#/matches/{{match.match_id}}" class="matchLink" >{{match.match_id}}</a>
+                    <p data-ng-repeat="player in match.players" class="heroesList"><img ng-src="img/heroes/{{getName(player.hero_id)}}_full.png" class="portrait"></p>
+
                 </li>
             </ul>
         </div>
