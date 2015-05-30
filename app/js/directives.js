@@ -9,7 +9,7 @@ dotaDirectives.directive('tableHead', function() {
     return {
         //'E' - only matches element name
 
-
-        templateUrl: 'partials/tableHead.html'
+        restrict: 'A',
+        templateUrl: 'partials/table.html'
     };
 });

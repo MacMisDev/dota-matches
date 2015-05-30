@@ -2,6 +2,7 @@
     <div class="center">
         <div class="winner">{{ match.radiant_win | checkWhoWin }}</div>
         <div class="row1">
+
             <h3 class="radiant">Radiant</h3>
             <table class="table table-striped table-bordered">
                 <thead>
@@ -18,16 +19,8 @@
                 </tr>
                 </thead>
                 <tbody>
-                <tr ng-repeat="player in match.players" ng-show="$index < 5">
-                    <td><img ng-src="img/heroes/{{getName(player.hero_id)}}_full.png" class="portrait"></td>
-                    <td>{{ player.account_id }}</td>
-                    <td>{{ player.level }}</td>
-                    <td>{{ player.kills }}</td>
-                    <td>{{ player.deaths }}</td>
-                    <td>{{ player.assists }}</td>
-                    <td>{{ player.last_hits }}</td>
-                    <td>{{ player.gold_per_min }}</td>
-                    <td>{{ player.xp_per_min }}</td>
+                <tr table-head ng-repeat="player in match.players" ng-show="$index < 5">
+
                 </tr>
                 </tbody>
             </table>
@@ -51,16 +44,8 @@
                 </tr>
                 </thead>
                 <tbody>
-                <tr ng-repeat="player in match.players" ng-show="$index >= 5">
-                    <td><img ng-src="img/heroes/{{getName(player.hero_id)}}_full.png" class="portrait"></td>
-                    <td>{{ player.account_id }}</td>
-                    <td>{{ player.level }}</td>
-                    <td>{{ player.kills }}</td>
-                    <td>{{ player.deaths }}</td>
-                    <td>{{ player.assists }}</td>
-                    <td>{{ player.last_hits }}</td>
-                    <td>{{ player.gold_per_min }}</td>
-                    <td>{{ player.xp_per_min }}</td>
+                <tr table-head ng-repeat="player in match.players" ng-show="$index >= 5">
+
                 </tr>
                 </tbody>
             </table>
